@@ -32,12 +32,13 @@ function displayResults(json) {
     const myListElement = document.createElement("ol");  
     json.tokens.forEach(function(token) {
         const listItem = document.createElement("li");
-        listItem.textContent = `Text: ${token.text}, 
+        listItem.className = "token-item"; // for css 
+        listItem.textContent = 
+        `
+        Text: ${token.text}, 
         POS: ${token.pos},
         LEMMA: ${token.lemma},
-        DEP: ${token.dep},
-        
-        
+        DEP: ${token.dep}
         `;
         myListElement.appendChild(listItem);
     }); 
