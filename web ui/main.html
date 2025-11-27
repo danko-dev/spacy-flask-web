@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>NLP with Spacy</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>NLP with Spacy</title>
 </head>
+
 <body>
-<h1>
+  <h1>
     Natural Language Processing with Spacy - Python, Flask, and JavaScript
-</h1>
-<form id="textForm" >
-  <label for="text">Enter Text:</label>
-  <textarea id="text" name="text"></textarea>
-  <input type="submit" value="Submit">
-</form>
-<br>
-<div id="results">
-   results:
-</div>
-<script src="script.js"></script>
+  </h1>
+  <form id="textForm">
+    <label for="text">Enter Text:</label>
+    <textarea id="text" name="text"></textarea>
+    <input type="submit" value="Submit">
+  </form>
+
+  <div id="results" />
+
+  <!-- <table id="results-table">
+    <thead>
+      <th>Text</th>
+      <th>Part of speech (POS)</th>
+      <th>LEMMA</th>
+      <th>Dependency</th>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table> -->
+
+  <footer>
+    <a href="https://universaldependencies.org/u/pos/" target="_blank" rel="noopener noreferrer">POS EXPLANTIONS</a>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>

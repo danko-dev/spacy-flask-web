@@ -1,5 +1,5 @@
 from flask import Flask, request
-from flask_cors import cross_origin
+from flask_cors import cross_origin # for dev only
 import spacy
 
 app = Flask(__name__)
@@ -16,7 +16,7 @@ def home():
 def submit_form():
     user_text = request.form.get("text")
     if user_text is None:
-        return "did not got user text"
+        return "did not get user text"
     else:
         return analyzeNlp(user_text)
 
@@ -27,8 +27,12 @@ def analyzeNlp(user_text):
     "pos": token.pos_, 
     "dep": token.dep_,
     "lemma": token.lemma_,
-    } for token in doc]
+     } for token in doc]
     return {"tokens": tokens}
+
+    # TODO: add ents using NER
+
+    # for testing:
     # return doc.text
     # for token in doc:
     #     print(token.text, token.pos_)
